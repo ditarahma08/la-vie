@@ -1,9 +1,23 @@
+:root {
+  --background: #182037;
+  --font: #f7f2de;
+  --yellow: #f7d35c;
+  --pink: #e9c9dd;
+  --orange: #d55648;
+}
+
+[data-theme="light"] {
+	--background: #f6f2e0;
+	--font: #182037;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--background);
+	color: var(--font);
 }
 
 a {

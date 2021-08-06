@@ -1,0 +1,30 @@
+.navigation {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 25px;
+	height: 92px;
+	background-color: var(--background);
+
+	.title {
+		font-family: 'Katibeh', cursive;
+		font-weight: 900;
+		font-size: 30px;
+		letter-spacing: 1px;
+		margin-top: 15px;
+	}
+
+	.menu {
+		ul {
+			display: flex;
+			list-style-type: none;
+
+			li {
+				margin: 0 10px;
+				cursor: pointer;
+			}
+		}
+	}
+}
