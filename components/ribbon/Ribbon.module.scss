@@ -1,0 +1,45 @@
+.ribbon {
+	.title {
+		overflow: hidden;
+		white-space: nowrap;
+		height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+		h5 {
+			position: relative;
+			font-size: 48px;
+			z-index: 0;
+		}
+	}
+
+	.text {
+		margin: 5px 10px;
+	}
+
+	.titleOrange {
+		background-color: var(--orange);
+		color: var(--pink);
+	}
+
+	.titleYellow {
+		background-color: var(--yellow);
+		color: var(--blue);
+	}
+
+	.titlePink {
+		background-color: var(--pink);
+		color: var(--orange);
+	}
+
+	.titleGreen {
+		background-color: var(--green);
+		color: var(--yellow);
+	}
+
+	.titleBlue {
+		background-color: var(--blue);
+		color: var(--yellow);
+	}
+}

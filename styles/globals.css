@@ -1,14 +1,10 @@
 :root {
-  --background: #182037;
-  --font: #f7f2de;
+  --blue: #182037;
+  --cream: #f7f2de;
   --yellow: #f7d35c;
   --pink: #e9c9dd;
   --orange: #d55648;
-}
-
-[data-theme="light"] {
-	--background: #f6f2e0;
-	--font: #182037;
+  --green: #2a4133;
 }
 
 html,
@@ -16,8 +12,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Raleway', sans-serif;
-  background-color: var(--background);
-	color: var(--font);
+  background-color: var(--blue);
+	color: var(--cream);
 }
 
 a {

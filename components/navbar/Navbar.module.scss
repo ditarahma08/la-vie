@@ -1,12 +1,13 @@
 .navigation {
 	position: fixed;
+	z-index: 1;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 15px 25px;
 	height: 92px;
-	background-color: var(--background);
+	background-color: var(--blue);
 
 	.title {
 		font-family: 'Katibeh', cursive;
