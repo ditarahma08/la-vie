@@ -4,8 +4,14 @@ import Navbar from '../components/navbar/navbar.js'
 import Header from '../components/header/header.js'
 import About from '../components/about/about.js'
 import Experiences from '../components/experiences/experiences.js'
+import Writing from '../components/writing/writing.js'
+import Contact from '../components/contact/contact.js'
 
 class Home extends Component {
+  showSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+  }
+
   render() {
     return (
       <>
@@ -17,10 +23,20 @@ class Home extends Component {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <Navbar />
+        <Navbar goToSection={this.showSection} />
         <Header />
-        <About />
-        <Experiences />
+        <div id="aboutMe">
+          <About />
+        </div>
+        <div id="myExperience">
+          <Experiences />
+        </div>
+        <div id="myWriting">
+          <Writing id="writing" />
+        </div>
+        <div id="myContact">
+          <Contact id="contact" />
+        </div>
       </>
     )
   }

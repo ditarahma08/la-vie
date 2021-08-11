@@ -1,0 +1,22 @@
+.contact {
+	height: 100vh;
+
+	.item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 70%;
+		text-transform: uppercase;
+		font-weight: bold;
+		line-height: 1.5;
+		letter-spacing: 1px;
+		font-size: 48px;
+	}
+
+	.footer {
+		display: flex;
+		justify-content: center;
+		font-size: 14px;
+	}
+}

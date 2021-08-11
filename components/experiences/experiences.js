@@ -40,7 +40,7 @@ class Experiences extends Component {
 				{
 					value: 3,
 					company: 'Bitindo',
-					logo: '/bitindo.jpeg',
+					logo: '/bitindo.png',
 					position: 'React Native Developer',
 					jobType: 'part-time',
 					joinDate: 'June 2018',
@@ -54,7 +54,7 @@ class Experiences extends Component {
 	render() {
 		return (
 			<div className={styles.experiences}>
-				<Ribbon text="experiences" />
+				<Ribbon text="experience" index={2} />
 				<div className={styles.list}>
 					{ this.state.experienceList.map(experience => (
 						<div key={experience.value} className={styles.company}>

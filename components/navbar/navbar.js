@@ -10,10 +10,10 @@ class Navbar extends Component {
 				</div>
 				<div className={styles.menu}>
 					<ul>
-						<li>About me</li>
-						<li>Experiences</li>
-						<li>Publications</li>
-						<li>Contact</li>
+						<li onClick={() => this.props.goToSection('aboutMe')}>About me</li>
+						<li onClick={() => this.props.goToSection('myExperience')}>Experience</li>
+						<li onClick={() => this.props.goToSection('myWriting')}>Writing</li>
+						<li onClick={() => this.props.goToSection('myContact')}>Contact</li>
 					</ul>
 				</div>
 			</nav>

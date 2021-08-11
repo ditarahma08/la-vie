@@ -15,14 +15,16 @@ class Ribbon extends Component {
 	}
 
 	handleOnScroll(top, bottom) {
-		const pagePosition = window.scrollY
-		top.style.left = `${pagePosition - 1600}px`
-		bottom.style.right = `${pagePosition + 500}px`
+		const BASE_POSITION_LEFT = 1000;
+		const BASE_POSITION_RIGHT = 500;
+		const PAGE_POSITION = window.scrollY
+		top.style.left = `${PAGE_POSITION - (this.props.index * BASE_POSITION_LEFT)}px`
+		bottom.style.right = `${PAGE_POSITION + (this.props.index * BASE_POSITION_RIGHT)}px`
 	}
 
 	render() {
 		const text = [];
-		for (let i = 0; i < 20; i++) {
+		for (let i = 0; i < 25 * this.props.index; i++) {
 			text.push(<span className={styles.text} key={i}>{ this.props.text }</span>)
 		}
 
