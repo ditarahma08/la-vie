@@ -7,7 +7,8 @@
 	align-items: center;
 	padding: 15px 25px;
 	height: 92px;
-	background-color: var(--blue);
+	background-color: var(--base);
+	color: var(--accent);
 
 	.title {
 		font-family: 'Katibeh', cursive;
@@ -15,16 +16,112 @@
 		font-size: 30px;
 		letter-spacing: 1px;
 		margin-top: 15px;
+		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover {
+			color: var(--orange);
+		}
+
+		.desktop {
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+
+		.mobile {
+			@media (min-width: 768px) {
+				display: none;
+			}
+		}
 	}
 
 	.menu {
+		@media (max-width: 767px) {
+			position: absolute;
+			top: -20px;
+			width: 200px;
+			transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+			transform: translate3d(500px, 0, 0);
+
+			ul {
+				flex-direction: column;
+				align-items: flex-start;
+				padding: 0;
+				box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+				background-color: var(--base);
+				height: 100vh;
+				line-height: 3;
+				padding-top: 25px;
+
+				li {
+					img {
+						display: none;
+					}
+				}
+			}
+		}
+
 		ul {
 			display: flex;
+			align-items: center;
 			list-style-type: none;
 
 			li {
 				margin: 0 10px;
 				cursor: pointer;
+				transition: 0.3s;
+
+				img {
+					height: 30px;
+				}
+
+				&:hover {
+					color: var(--orange);
+				}
+			}
+		}
+	}
+
+	.opened {
+		@media (max-width: 767px) {
+			transform: translate3d(200px, 0, 0);	
+		}
+	}
+
+	.bars {
+		transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+
+		@media (min-width: 768px) {
+			display: none;
+		}
+
+		&.cross {
+			transform: translate3d(-200px, 0, 0);
+		}
+
+		div {
+			height: 4px;
+			width: 22px;
+			background-color: var(--accent);
+			margin-top: 4px;
+			transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+
+			&:last-child {
+				width: 11px;
+				float: right;
+			}
+
+			&.top {
+				transform: translate3d(0, 8px, 0) rotate(45deg);
+			}
+
+			&.mid {
+				transform: translateZ(0) rotate(-45deg);
+			}
+
+			&.bottom {
+				transform: scaleX(0);
 			}
 		}
 	}

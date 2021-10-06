@@ -8,13 +8,36 @@ import Writing from '../components/writing/writing.js'
 import Contact from '../components/contact/contact.js'
 
 class Home extends Component {
+  constructor() {
+    super()
+    this.state = {
+      darkTheme: true
+    }
+  }
+
+  switchTheme = () => {
+    const darkTheme = this.state.darkTheme
+
+    if (darkTheme) {
+      this.setState({
+        darkTheme: false
+      })
+      document.getElementById("myPage").setAttribute("data-theme", "light");
+    } else {
+      this.setState({
+        darkTheme: true
+      })
+      document.getElementById("myPage").removeAttribute("data-theme")
+    }
+  }
+
   showSection = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
   }
 
   render() {
     return (
-      <>
+      <div id="myPage">
         <Head>
           <title>Dita Rahma P. | Site</title>
           <meta name="description" content="A personal site by Dita Rahma P." />
@@ -23,13 +46,15 @@ class Home extends Component {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <Navbar goToSection={this.showSection} />
-        <Header />
+        <Navbar darkTheme={this.state.darkTheme} goToSection={this.showSection} changeTheme={this.switchTheme} />
+        <div id="home" className="container-fluid">
+          <Header darkTheme={this.state.darkTheme} />
+        </div>
         <div id="aboutMe">
           <About />
         </div>
         <div id="myExperience">
-          <Experiences />
+          <Experiences darkTheme={this.state.darkTheme} />
         </div>
         <div id="myWriting">
           <Writing id="writing" />
@@ -37,7 +62,7 @@ class Home extends Component {
         <div id="myContact">
           <Contact id="contact" />
         </div>
-      </>
+      </div>
     )
   }
 }

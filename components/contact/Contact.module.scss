@@ -12,11 +12,23 @@
 		line-height: 1.5;
 		letter-spacing: 1px;
 		font-size: 48px;
+
+		a {
+			transition: 0.3s;
+
+			&:hover {
+				color: var(--orange);
+			}
+		}
 	}
 
 	.footer {
 		display: flex;
 		justify-content: center;
 		font-size: 14px;
+	}
+
+	@media (max-width: 767px) {
+		margin: 35px 0;
 	}
 }
