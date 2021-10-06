@@ -15,7 +15,7 @@ class Experiences extends Component {
 					jobType: 'full-time',
 					joinDate: 'August 2021',
 					exitDate: '',
-					description: ''
+					description: 'Collaborate with Back-end Engineers and Quality Assurance Engineers to deliver the products developed with Next.js and React.js.'
 				},
 				{
 					value: 1,
@@ -25,7 +25,7 @@ class Experiences extends Component {
 					jobType: 'full-time',
 					joinDate: 'October 2017',
 					exitDate: 'August 2021',
-					description: 'Develop new features in Mamikos web using Vue JS, maintain Mamikos web time to time, and finding the best code implementation for better web with my team.'
+					description: 'Develop new features in Mamikos web using Vue.js and Nuxt.js, maintain Mamikos web time to time by writing unit test using Jest, and finding the best code implementation for better web with my team.'
 				},
 				{
 					value: 2,
